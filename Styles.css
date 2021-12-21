@@ -23,7 +23,7 @@ body{
 }
 
 .background{
-    background-image: url(./images/Woods.jpg);
+    background-image: url(Images/Woods.jpg);
     background-size: cover;
     width: 624px;
     max-height: 555px;
