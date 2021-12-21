@@ -1,0 +1,49 @@
+h1, p{
+    color:white;
+}
+
+h1{
+    font-size: 3rem;
+    margin-top:0
+}
+
+p{
+    font-size: 1.5rem;
+    margin:0;
+}
+
+.competition{
+    -webkit-animation: fadein 2s;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    align-content: center;
+}
+
+.background{
+    background-image: url(images/Woods.jpg);
+    background-size: cover;
+    width: 624px;
+    max-height: 555px;
+    margin:auto;
+    padding: 100px 200px;
+}
+
+form{
+    display: flex;
+    justify-content: flex-end;
+    margin: 100px 0 0 100px;
+}
+
+input{
+    font-size: 1.5rem;
+}
+button{
+    font-size: 1.5rem;
+    padding: .5rem 3rem;
+    color:white;
+    background-color: #FF9720;
+    margin-left: 1rem;
+}
