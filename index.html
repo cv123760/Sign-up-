@@ -2,25 +2,79 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="Styles.css">
+    <title>Artist Name | Official Website</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="background">
-        <header>
-            <h1>Daily Group Run</h1>
-            <p>Run through nature with some company
-            </p>
-            <p class="competition">or competition
-            </p>
-        </header>
-        <form action="post">
-            <input type="email" placeholder="Email">
-            <button>Sign Up</button>
-        </form>
-    </div>
-    
+
+    <header class="header">
+        <div class="container">
+            <h1>Artist Name</h1>
+            <nav>
+                <a href="#music">Music</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <img src="img/artist-photo.jpg" alt="Artist Name Portrait" class="hero-image">
+            <h2>New Single: "The Next Big Thing"</h2>
+            <p>Available now on all streaming platforms!</p>
+            <a href="#music" class="btn">Listen Now</a>
+        </div>
+    </section>
+
+    <section id="music" class="music-section">
+        <div class="container">
+            <h3>Featured Tracks</h3>
+            <div class="track-card">
+                <img src="img/album-art.jpg" alt="Album Art for Track 1">
+                <h4>Song Title 1</h4>
+                <p>Genre: Pop | Release: 2025</p>
+                <audio controls>
+                    <source src="music/track1.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <div class="streaming-links">
+                    <a href="#" target="_blank">Spotify</a> | 
+                    <a href="#" target="_blank">Apple Music</a>
+                </div>
+            </div>
+
+            </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <h3>About [Artist Name]</h3>
+            <p>A brief, compelling biography goes here. Mention her style, influences, and upcoming projects...</p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h3>Connect</h3>
+            <p>Follow [Artist Name] on social media for updates.</p>
+            <div class="social-links">
+                <a href="#" target="_blank">Instagram</a>
+                <a href="#" target="_blank">TikTok</a>
+                <a href="#" target="_blank">YouTube</a>
+                </div>
+            <p class="email">Email: <a href="mailto:contact@artistname.com">contact@artistname.com</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Artist Name. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
