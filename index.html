@@ -3,78 +3,411 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artist Name | Official Website</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
+    <title>Master Math with Confidence | Professional Tutoring</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font import for a professional feel */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Inter:wght@400;600;700&display=swap');
+        
+        :root {
+            --primary-color: #4338ca; /* Indigo 700 - Trust, Professionalism */
+            --accent-color: #10b981; /* Emerald 500 - Growth, Success */
+            --text-dark: #1f2937; /* Gray 800 */
+            --background-light: #f9fafb; /* Gray 50 */
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background-light);
+            color: var(--text-dark);
+        }
 
-    <header class="header">
-        <div class="container">
-            <h1>Artist Name</h1>
-            <nav>
-                <a href="#music">Music</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-            </nav>
+        .header-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Title text styling */
+        .academic-title {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* Simple utility for the modal overlay */
+        .modal-overlay {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-white bg-opacity-95 header-shadow">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <a href="#" class="text-2xl font-bold academic-title" style="color: var(--primary-color);">Math Success</a>
+                
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex space-x-8 text-lg">
+                    <a href="#services" class="text-gray-700 hover:text-indigo-600 transition duration-200">Services</a>
+                    <a href="#about" class="text-gray-700 hover:text-indigo-600 transition duration-200">My Approach</a>
+                    <a href="#testimonials" class="text-gray-700 hover:text-indigo-600 transition duration-200">Testimonials</a>
+                </nav>
+
+                <!-- CTA Button (Desktop) -->
+                <button id="open-modal-desktop" class="hidden md:inline-flex items-center justify-center px-4 py-2 border border-transparent text-base font-medium rounded-full text-white bg-emerald-500 hover:bg-emerald-600 transition duration-300 shadow-lg">
+                    Book Free Consultation
+                </button>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500" aria-expanded="false">
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white header-shadow pb-4">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-center">
+                <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 w-full text-center">Services</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 w-full text-center">My Approach</a>
+                <a href="#testimonials" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 w-full text-center">Testimonials</a>
+                <button id="open-modal-mobile" class="mt-4 w-3/4 px-4 py-2 border border-transparent text-base font-medium rounded-full text-white bg-emerald-500 hover:bg-emerald-600 transition duration-300 shadow-lg">
+                    Book Free Consultation
+                </button>
+            </div>
         </div>
     </header>
 
-    <section class="hero">
-        <div class="container">
-            <img src="img/artist-photo.jpg" alt="Artist Name Portrait" class="hero-image">
-            <h2>New Single: "The Next Big Thing"</h2>
-            <p>Available now on all streaming platforms!</p>
-            <a href="#music" class="btn">Listen Now</a>
-        </div>
-    </section>
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="relative pt-16 pb-24 lg:pt-32 lg:pb-40 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between">
+                <!-- Text Content -->
+                <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-12">
+                    <span class="text-sm font-semibold uppercase tracking-wider" style="color: var(--accent-color);">Personalized 1-on-1 Math Tutoring</span>
+                    <h1 class="academic-title text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tighter mt-2" style="color: var(--primary-color);">
+                        Unlock Your <span class="text-emerald-500">Math Confidence</span> and Potential.
+                    </h1>
+                    <p class="mt-6 text-xl text-gray-600 max-w-lg">
+                        From foundational algebra to advanced calculus, I provide tailored instruction to help students understand complex concepts and achieve top grades.
+                    </p>
+                    <div class="mt-10 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <button id="open-modal-hero" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-medium rounded-full text-white bg-indigo-600 hover:bg-indigo-700 transition duration-300 shadow-xl transform hover:scale-105">
+                            Schedule a Free Trial Session
+                        </button>
+                        <a href="#services" class="inline-flex items-center justify-center px-8 py-4 border border-gray-300 text-lg font-medium rounded-full text-gray-700 bg-white hover:bg-gray-100 transition duration-300 shadow-lg">
+                            See Subjects
+                        </a>
+                    </div>
+                </div>
 
-    <section id="music" class="music-section">
-        <div class="container">
-            <h3>Featured Tracks</h3>
-            <div class="track-card">
-                <img src="img/album-art.jpg" alt="Album Art for Track 1">
-                <h4>Song Title 1</h4>
-                <p>Genre: Pop | Release: 2025</p>
-                <audio controls>
-                    <source src="music/track1.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-                <div class="streaming-links">
-                    <a href="#" target="_blank">Spotify</a> | 
-                    <a href="#" target="_blank">Apple Music</a>
+                <!-- Image Placeholder: Simple academic illustration or conceptual image -->
+                <div class="lg:w-1/2 flex justify-center p-4">
+                    <img class="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 object-cover rounded-3xl shadow-2xl border-4 border-white transform transition duration-500 hover:rotate-3" 
+                         src="https://placehold.co/800x800/e0f2f1/10b981?text=Math+Equation+Success" 
+                         alt="Conceptual image of math success and problem solving."
+                         onerror="this.onerror=null; this.src='https://placehold.co/400x400/e0f2f1/10b981?text=Tutor+Hero';"
+                    >
                 </div>
             </div>
+        </section>
 
-            </div>
-    </section>
-
-    <section id="about" class="about-section">
-        <div class="container">
-            <h3>About [Artist Name]</h3>
-            <p>A brief, compelling biography goes here. Mention her style, influences, and upcoming projects...</p>
-        </div>
-    </section>
-
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h3>Connect</h3>
-            <p>Follow [Artist Name] on social media for updates.</p>
-            <div class="social-links">
-                <a href="#" target="_blank">Instagram</a>
-                <a href="#" target="_blank">TikTok</a>
-                <a href="#" target="_blank">YouTube</a>
+        <!-- Services Section -->
+        <section id="services" class="py-16 sm:py-24 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="academic-title text-4xl sm:text-5xl font-bold" style="color: var(--primary-color);">Subjects I Teach</h2>
+                    <p class="mt-4 text-xl text-gray-600">Tailored curriculum to fit your student's exact academic needs.</p>
                 </div>
-            <p class="email">Email: <a href="mailto:contact@artistname.com">contact@artistname.com</a></p>
-        </div>
-    </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Artist Name. All Rights Reserved.</p>
+                <!-- Service Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Item 1: Algebra -->
+                    <div class="bg-white rounded-xl p-6 shadow-xl border-t-4 border-indigo-500 hover:shadow-2xl transition duration-300">
+                        <div class="text-4xl mb-4" style="color: var(--accent-color);">
+                            <!-- Icon for Algebra (Calculation) -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 7h6m-3 4h.01M12 11h.01M12 11v6m-4-6h8m-8 6h8m-8-6v6" /></svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-2" style="color: var(--text-dark);">Algebra I & II</h3>
+                        <p class="text-gray-600">Building a strong foundation in linear equations, polynomials, and quadratic functions.</p>
+                    </div>
+
+                    <!-- Item 2: Geometry -->
+                    <div class="bg-white rounded-xl p-6 shadow-xl border-t-4 border-indigo-500 hover:shadow-2xl transition duration-300">
+                        <div class="text-4xl mb-4" style="color: var(--accent-color);">
+                            <!-- Icon for Geometry (Shapes) -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" /><path stroke-linecap="round" stroke-linejoin="round" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" /></svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-2" style="color: var(--text-dark);">Geometry & Trig</h3>
+                        <p class="text-gray-600">Mastering proofs, spatial reasoning, and trigonometric functions (sin, cos, tan).</p>
+                    </div>
+
+                    <!-- Item 3: Calculus -->
+                    <div class="bg-white rounded-xl p-6 shadow-xl border-t-4 border-indigo-500 hover:shadow-2xl transition duration-300">
+                        <div class="text-4xl mb-4" style="color: var(--accent-color);">
+                            <!-- Icon for Calculus (Graphing/Growth) -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8" /><path stroke-linecap="round" stroke-linejoin="round" d="M3 15a4 4 0 004 4h9a5 5 0 10-.15-9.999 5.002 5.002 0 10-9.75 0 6 6 0 001.378 1.968 1.5 1.5 0 01.378 1.968" /></svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-2" style="color: var(--text-dark);">Pre-Calc & Calculus</h3>
+                        <p class="text-gray-600">Limits, derivatives, integrals, and the application of change in single-variable calculus.</p>
+                    </div>
+                    
+                    <!-- Item 4: Test Prep -->
+                    <div class="bg-white rounded-xl p-6 shadow-xl border-t-4 border-indigo-500 hover:shadow-2xl transition duration-300">
+                        <div class="text-4xl mb-4" style="color: var(--accent-color);">
+                            <!-- Icon for Test Prep (Book/Score) -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.5l8 4.5-8 4.5-8-4.5 8-4.5zm0 13l8-4.5M12 18l-8-4.5m4-9l4 2.25M8 9.5l4-2.25" /><path stroke-linecap="round" stroke-linejoin="round" d="M21 12l-9 5.25L3 12m18 0v7.5l-9 5.25L3 19.5V12" /></svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-2" style="color: var(--text-dark);">ACT / SAT Prep</h3>
+                        <p class="text-gray-600">Targeted review of key concepts and strategic practice tests to maximize score potential.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About/Approach Section -->
+        <section id="about" class="py-16 sm:py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-start justify-between gap-12">
+                <!-- Text Content -->
+                <div class="lg:w-1/2">
+                    <h2 class="academic-title text-4xl sm:text-5xl font-bold mb-6" style="color: var(--primary-color);">My Personalized Teaching Approach</h2>
+                    <p class="text-lg text-gray-700 mb-6">
+                        I believe that every student can excel at math, but not every student learns the same way. My approach moves beyond rote memorization to focus on **conceptual understanding** and developing strong problem-solving habits.
+                    </p>
+                    <ul class="list-disc list-inside space-y-3 text-lg text-gray-700 mb-8 pl-4">
+                        <li>**Diagnose:** We identify the root causes of difficulty, not just the symptoms.</li>
+                        <li>**Customize:** Lessons are tailored precisely to the student's curriculum and learning style.</li>
+                        <li>**Empower:** I foster independence by teaching students *how* to think critically, not just *what* to compute.</li>
+                        <li>**Connect:** We relate mathematical concepts to real-world applications to make learning meaningful.</li>
+                    </ul>
+                    <button id="open-modal-about" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-full text-white bg-emerald-500 hover:bg-emerald-600 transition duration-300 shadow-lg">
+                        Meet the Tutor (Contact)
+                    </button>
+                </div>
+                
+                <!-- Image/Diagram -->
+                <div class="lg:w-1/2 flex justify-center mt-8 lg:mt-0">
+                    <img class="w-full max-w-md h-auto object-cover rounded-xl shadow-2xl border-4 border-indigo-200"
+                         src="https://placehold.co/800x600/c7d2fe/4338ca?text=Tutor+Portrait+or+Teaching+Diagram" 
+                         alt="Conceptual diagram showing the personalized tutoring cycle"
+                         onerror="this.onerror=null; this.src='https://placehold.co/400x300/c7d2fe/4338ca?text=About+Us';"
+                    >
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-16 sm:py-24 bg-indigo-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="academic-title text-4xl sm:text-5xl font-bold" style="color: var(--primary-color);">What Parents and Students Say</h2>
+                </div>
+
+                <!-- Testimonial Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Testimonial 1 -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-emerald-500">
+                        <p class="text-lg italic text-gray-700">"Mr. Smith helped my daughter raise her Pre-Calculus grade from a C to an A- in a single semester. He doesn't just provide answers; he teaches true understanding."</p>
+                        <p class="mt-4 font-semibold text-indigo-600">- Sarah K., Parent of High School Student</p>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-emerald-500">
+                        <p class="text-lg italic text-gray-700">"I finally understood derivatives! The one-on-one time made a huge difference, and my confidence for the AP Calculus exam is higher than ever."</p>
+                        <p class="mt-4 font-semibold text-indigo-600">- Alex R., AP Calculus Student</p>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-emerald-500">
+                        <p class="text-lg italic text-gray-700">"The targeted SAT math prep was invaluable. The strategies and practice tests provided exactly what I needed to hit my target score. Highly recommend."</p>
+                        <p class="mt-4 font-semibold text-indigo-600">- David L., College Applicant</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-xl font-bold mb-4 text-emerald-300">Contact & Location</h4>
+                    <p>Online Tutoring Available Worldwide</p>
+                    <p>Local In-Person sessions: (555) 555-MATH</p>
+                    <p>Email: <a href="mailto:tutor@mathsuccess.com" class="text-indigo-200 hover:text-emerald-500">tutor@mathsuccess.com</a></p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-xl font-bold mb-4 text-emerald-300">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#services" class="hover:text-emerald-500 transition duration-200">Our Subjects</a></li>
+                        <li><a href="#about" class="hover:text-emerald-500 transition duration-200">Teaching Philosophy</a></li>
+                        <li><button id="open-modal-footer" class="hover:text-emerald-500 transition duration-200">Book Now</button></li>
+                    </ul>
+                </div>
+
+                <!-- Disclaimer -->
+                <div class="text-sm text-gray-400">
+                    <h4 class="text-xl font-bold mb-4 text-emerald-300">Disclaimer</h4>
+                    <p>Results may vary based on student dedication and preparation. All sessions are scheduled based on mutual availability.</p>
+                </div>
+            </div>
+            <div class="mt-10 pt-8 border-t border-gray-700 text-center text-sm text-gray-400">
+                &copy; 2025 Math Success Tutoring.
+            </div>
         </div>
     </footer>
 
-    <script src="./script.js"></script>
+
+    <!-- Contact/Consultation Modal (Hidden by default) -->
+    <div id="contact-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 modal-overlay">
+        <div class="bg-white rounded-xl p-8 max-w-lg w-full shadow-2xl transform transition-all duration-300 scale-100">
+            <div class="flex justify-between items-start">
+                <h3 class="text-3xl font-bold mb-4" style="color: var(--primary-color);">Schedule Your Free Consultation</h3>
+                <button id="close-modal" class="text-gray-400 hover:text-gray-600 text-2xl">
+                    &times;
+                </button>
+            </div>
+            <p class="mb-6 text-gray-600">
+                Let's discuss your student's needs. We will follow up within one business day.
+            </p>
+            
+            <form id="contact-form">
+                <div class="mb-4">
+                    <label for="student-name" class="block text-sm font-medium text-gray-700">Student Name</label>
+                    <input type="text" id="student-name" name="student-name" class="mt-1 block w-full border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500 p-3" required>
+                </div>
+                <div class="mb-4">
+                    <label for="contact-email" class="block text-sm font-medium text-gray-700">Parent Email or Phone</label>
+                    <input type="text" id="contact-email" name="contact-email" class="mt-1 block w-full border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500 p-3" required>
+                </div>
+                <div class="mb-6">
+                    <label for="subject-details" class="block text-sm font-medium text-gray-700">Subjects Needed & Goals (e.g., Algebra 2, aiming for B+)</label>
+                    <textarea id="subject-details" name="subject-details" rows="4" class="mt-1 block w-full border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500 p-3" required></textarea>
+                </div>
+                <button type="submit" class="w-full py-3 border border-transparent text-base font-medium rounded-full text-white bg-indigo-600 hover:bg-indigo-700 transition duration-300 shadow-lg">
+                    Request Consultation
+                </button>
+
+                <!-- Confirmation Message (Hidden) -->
+                <p id="confirmation-message" class="text-center mt-4 text-emerald-600 font-semibold hidden">
+                    Success! Your request has been sent. I will contact you shortly to schedule our meeting.
+                </p>
+            </form>
+        </div>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Mobile Menu Toggle ---
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuButton.addEventListener('click', () => {
+                const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true' || false;
+                
+                if (isExpanded) {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuButton.setAttribute('aria-expanded', 'false');
+                } else {
+                    mobileMenu.classList.remove('hidden');
+                    mobileMenuButton.setAttribute('aria-expanded', 'true');
+                }
+            });
+
+            // --- Contact Modal Logic ---
+            const contactModal = document.getElementById('contact-modal');
+            const closeModalButton = document.getElementById('close-modal');
+            const contactForm = document.getElementById('contact-form');
+            const confirmationMessage = document.getElementById('confirmation-message');
+
+            // Array of buttons that open the modal
+            const openModalButtons = [
+                document.getElementById('open-modal-desktop'),
+                document.getElementById('open-modal-mobile'),
+                document.getElementById('open-modal-hero'),
+                document.getElementById('open-modal-about'),
+                document.getElementById('open-modal-footer')
+            ].filter(btn => btn != null); // Filter out any null elements if IDs are missing
+
+            // Function to open the modal
+            const openModal = () => {
+                contactModal.classList.remove('hidden');
+                contactModal.classList.add('flex');
+            };
+
+            // Function to close the modal and reset form
+            const closeModal = () => {
+                contactModal.classList.add('hidden');
+                contactModal.classList.remove('flex');
+                // Reset form and confirmation
+                contactForm.reset();
+                confirmationMessage.classList.add('hidden');
+                // Re-enable form fields
+                contactForm.querySelectorAll('input, textarea, button').forEach(el => el.disabled = false);
+            };
+
+            // Event Listeners for opening the modal
+            openModalButtons.forEach(button => {
+                button.addEventListener('click', openModal);
+            });
+
+            // Event Listener for closing the modal
+            closeModalButton.addEventListener('click', closeModal);
+            
+            // Close modal if user clicks outside of it
+            contactModal.addEventListener('click', (e) => {
+                if (e.target === contactModal) {
+                    closeModal();
+                }
+            });
+
+            // Form submission handler (mock)
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                // Show confirmation, hide form fields and disable button
+                confirmationMessage.classList.remove('hidden');
+                contactForm.querySelectorAll('input, textarea, button').forEach(el => el.disabled = true);
+                
+                // Mock logging the submission data
+                console.log('Consultation Request Submitted:', {
+                    student: document.getElementById('student-name').value,
+                    contact: document.getElementById('contact-email').value,
+                    details: document.getElementById('subject-details').value
+                });
+
+                // Automatically close the modal after a short delay
+                setTimeout(closeModal, 3000);
+            });
+
+
+            // --- Smooth Scrolling for Navigation ---
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    // Only prevent default if it's a menu link, not a general anchor
+                    if(this.getAttribute('href') !== '#') {
+                        e.preventDefault();
+                        document.querySelector(this.getAttribute('href')).scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                        // Close mobile menu after clicking a link
+                        if (!mobileMenu.classList.contains('hidden')) {
+                             mobileMenu.classList.add('hidden');
+                             mobileMenuButton.setAttribute('aria-expanded', 'false');
+                        }
+                    }
+                });
+            });
+
+        });
+    </script>
 </body>
 </html>
